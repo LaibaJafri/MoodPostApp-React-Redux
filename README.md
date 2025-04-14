@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+MoodPost (Redux Implementation)
+A modern React app with Redux for state management, functioning as a moodboard-style blogging platform. Users can share posts, react with moods, archive posts, and delete them. The app is built with functional components, hooks, and Redux Toolkit.
+Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create Posts: Users can write posts (up to 280 characters) with an optional author name. Posts can include hashtags (e.g., #express).
+Mood Reactions: Users can react to posts with three moods: Happy (😊), Sad (😢), and Fire (🔥). Reactions include a floating animation.
+Archive Posts: Posts can be archived and viewed in a separate "Archive" tab.
+Delete Posts: Users can delete posts with a confirmation prompt.
+Tabs: Switch between "Feed" (active posts) and "Archive" (archived posts) views.
+Persistent Storage: Posts are saved to localStorage and persist across page reloads.
+Responsive Design: The app is styled for both desktop and mobile devices (responsive at 480px and below).
+Animations: Includes subtle animations for rendering posts (slideUp, fadeIn) and mood reactions (floatUp).
 
-## Available Scripts
+Tech Stack
 
-In the project directory, you can run:
+React: Built with modern React (functional components, hooks like useState for local component state).
+Redux: Uses @reduxjs/toolkit and react-redux for centralized state management.
+CSS: Custom styles with CSS variables, animations, and responsive design.
+Font Awesome: For icons (e.g., user, archive, trash).
+Google Fonts: Uses the Poppins font for a clean, modern look.
+localStorage: For persisting posts across sessions.
 
-### `npm start`
+**Test the App**:
+   - Create a post by entering some text (e.g., "Hello #test") and an optional author name, then click "Post".
+   - React to posts with mood buttons (😊, 😢, 🔥).
+   - Archive or delete posts using the respective buttons.
+   - Switch between "Feed" and "Archive" tabs to view active or archived posts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Creating a Post**:
+  - Enter your name (optional) in the "Your name" field.
+  - Write your post in the textarea (max 280 characters).
+  - Click the "Post" button to share your post.
+  - The post will appear in the "Feed" tab.
 
-### `npm test`
+- **Reacting to Posts**:
+  - Click the mood buttons (😊, 😢, 🔥) to add a reaction. The reaction count will increment, and a floating animation will play.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Archiving Posts**:
+  - Click the archive icon to move a post to the "Archive" tab.
+  - In the "Archive" tab, click the unarchive icon to move it back to "Feed".
 
-### `npm run build`
+- **Deleting Posts**:
+  - Click the trash icon to delete a post. A confirmation prompt will appear.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Switching Tabs**:
+  - Use the "Feed" and "Archive" tabs to switch between active and archived posts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Styling
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app uses a custom `style.css` file with the following features:
+- **CSS Variables**: Colors and shadows are defined using CSS custom properties (e.g., `--primary: #31473A`).
+- **Animations**: Includes `fadeIn`, `slideUp`, and `floatUp` animations for smooth transitions.
+- **Responsive Design**: Adjusts layout and font sizes for screens smaller than 480px.
+- **Font Awesome Icons**: Used for user, archive, trash, and other icons.
+- **Google Fonts**: Uses the Poppins font for a clean, modern look.
 
-### `npm run eject`
+## Known Issues
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Mood Animation**: The mood reaction animation uses React state to manage floating emojis. For more complex animations, consider using a library like `framer-motion`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
