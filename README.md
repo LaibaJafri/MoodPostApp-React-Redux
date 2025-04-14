@@ -1,26 +1,29 @@
-MoodPost (Redux Implementation)
+# MoodPost App - With React JS & Redux 
+
 A modern React app with Redux for state management, functioning as a moodboard-style blogging platform. Users can share posts, react with moods, archive posts, and delete them. The app is built with functional components, hooks, and Redux Toolkit.
-Features
 
-Create Posts: Users can write posts (up to 280 characters) with an optional author name. Posts can include hashtags (e.g., #express).
-Mood Reactions: Users can react to posts with three moods: Happy (😊), Sad (😢), and Fire (🔥). Reactions include a floating animation.
-Archive Posts: Posts can be archived and viewed in a separate "Archive" tab.
-Delete Posts: Users can delete posts with a confirmation prompt.
-Tabs: Switch between "Feed" (active posts) and "Archive" (archived posts) views.
-Persistent Storage: Posts are saved to localStorage and persist across page reloads.
-Responsive Design: The app is styled for both desktop and mobile devices (responsive at 480px and below).
-Animations: Includes subtle animations for rendering posts (slideUp, fadeIn) and mood reactions (floatUp).
+## Features
 
-Tech Stack
+- Create Posts: Users can write posts (up to 280 characters) with an optional author name. Posts can include hashtags (e.g., #express).
+- Mood Reactions: Users can react to posts with three moods: Happy (😊), Sad (😢), and Fire (🔥). Reactions include a floating animation.
+- Archive Posts: Posts can be archived and viewed in a separate "Archive" tab.
+- Delete Posts: Users can delete posts with a confirmation prompt.
+- Tabs: Switch between "Feed" (active posts) and "Archive" (archived posts) views.
+- Persistent Storage: Posts are saved to localStorage and persist across page reloads.
+- Responsive Design: The app is styled for both desktop and mobile devices (responsive at 480px and below).
+- Animations: Includes subtle animations for rendering posts (slideUp, fadeIn) and mood reactions (floatUp).
 
-React: Built with modern React (functional components, hooks like useState for local component state).
-Redux: Uses @reduxjs/toolkit and react-redux for centralized state management.
-CSS: Custom styles with CSS variables, animations, and responsive design.
-Font Awesome: For icons (e.g., user, archive, trash).
-Google Fonts: Uses the Poppins font for a clean, modern look.
-localStorage: For persisting posts across sessions.
+## Tech Stack
 
-**Test the App**:
+- React: Built with modern React (functional components, hooks like useState for local component state).
+- Redux: Uses @reduxjs/toolkit and react-redux for centralized state management.
+- CSS: Custom styles with CSS variables, animations, and responsive design.
+- Font Awesome: For icons (e.g., user, archive, trash).
+- Google Fonts: Uses the Poppins font for a clean, modern look.
+- localStorage: For persisting posts across sessions.
+
+## Test the App:
+
    - Create a post by entering some text (e.g., "Hello #test") and an optional author name, then click "Post".
    - React to posts with mood buttons (😊, 😢, 🔥).
    - Archive or delete posts using the respective buttons.
@@ -58,5 +61,5 @@ The app uses a custom `style.css` file with the following features:
 
 ## Known Issues
 
-- **Mood Animation**: The mood reaction animation uses React state to manage floating emojis. For more complex animations, consider using a library like `framer-motion`.
+**Mood Animation**: The mood reaction animation uses React state to manage floating emojis. For more complex animations, consider using a library like `framer-motion`.
 
